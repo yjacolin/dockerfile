@@ -1,4 +1,4 @@
-docker run --rm --name="trainings_postgis" \
+docker run --name="trainings_postgis" \
 -i -t \
 -v ${HOME}:/home/${USER} \
 -p 3333:5432 \
