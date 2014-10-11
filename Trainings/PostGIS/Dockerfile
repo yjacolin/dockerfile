@@ -15,7 +15,7 @@ RUN pg_createcluster --locale C -e UTF8 -p 5432 --start 9.3 main
 RUN /etc/init.d/postgresql restart
 ADD createdb.sh /createdb.sh
 RUN chmod 770 /createdb.sh
-#RUN /createdb.sh
+RUN /createdb.sh
 
 
 
