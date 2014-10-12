@@ -1,4 +1,4 @@
-docker run --rm --name="qmapfileeditor" \
+docker run --name="qmapfileeditor" \
 -i -t \
 -v ${HOME}/.ssh:/root/.ssh:ro \
 -v ${HOME}/.gtkrc-2.0:/.gtkrc-2.0 \
