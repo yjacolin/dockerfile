@@ -5,5 +5,4 @@ docker run --name="qmapfileeditor" \
 -v ${HOME}:/home/${USER} \
 -v /tmp/.X11-unix:/tmp/.X11-unix \
 -e DISPLAY=unix$DISPLAY \
-yjacolin/qmapfileeditor:v0.1 
-bash
+yjacolin/qmapfileeditor:v0.1 bash
