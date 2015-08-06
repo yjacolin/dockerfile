@@ -37,7 +37,7 @@ RUN apt-get install -y \
 
 RUN a2enmod expires
 RUN a2enmod rewrite
-ADD georezo /etc/apache2/sites-available/
+COPY georezo /etc/apache2/sites-available/
 RUN a2ensite georezo
 RUN service apache2 reload
 
