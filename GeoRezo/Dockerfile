@@ -2,7 +2,9 @@ FROM debian:stable
 MAINTAINER Yves Jacolin <yjacolin@free.fr>
 
 # Common apps
+ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y \
+  apt-utils \
   vim \
   git \
   wget \
