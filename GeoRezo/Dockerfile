@@ -41,7 +41,7 @@ RUN apt-get install -y \
 
 RUN a2enmod expires
 RUN a2enmod rewrite
-COPY georezo /etc/apache2/sites-available/
+COPY georezo.conf /etc/apache2/sites-available/
 RUN a2ensite georezo
 RUN service apache2 reload
 
@@ -52,5 +52,7 @@ ADD start.sh /start.sh
 RUN chmod 0755 /start.sh
 
 RUN mkdir -p /home/georezol
+CMD mysql start
+#CMD apache2 start
 WORKDIR /home/georezo
 
