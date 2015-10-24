@@ -18,7 +18,7 @@ mysql --password=georezo -e "CREATE USER 'georezo'@'localhost' IDENTIFIED BY 'ge
 mysql --password=georezo -e "GRANT ALL PRIVILEGES ON * . * TO 'georezo'@'localhost';"
 mysqladmin --password=georezo reload
 
-echo "First run of GeoRezo make command"
-cd /home/georezo/grz_portal/
-drush make grz_portal.make
-drush si georezo_profile --db-url=mysql://georezo:georezo@localhost/georezo --db-su=root --db-su-pw=georezo --site-name=GeoRezo --site-mail=noreply@georezo.net --account-name=editeur --account-mail=editeur@georezo.net --account-pass=editeur
+#echo "First run of GeoRezo make command"
+#cd /home/georezo/grz_portal/
+#drush make grz_portal.make
+#drush si georezo_profile --db-url=mysql://georezo:georezo@localhost/georezo --db-su=root --db-su-pw=georezo --site-name=GeoRezo --site-mail=noreply@georezo.net --account-name=editeur --account-mail=editeur@georezo.net --account-pass=editeur

@@ -9,7 +9,11 @@ RUN apt-get update && apt-get install -y \
   git \
   wget \
   curl \
+  locales \
+  locales-all \
   unzip
+
+RUN update-locale LANG=en_US.UTF-8
 
 # MapServer and dependencies
 RUN apt-get install -y \
@@ -28,12 +32,12 @@ RUN apt-get install -y \
   mysql-server \
   mysql-common
 
-RUN apt-get install -y \
-  postgresql-common \
-  postgresql-client \
-  postgresql-contrib \
-  postgresql \
-  libpq5
+#RUN apt-get install -y \
+#  postgresql-common \
+#  postgresql-client \
+#  postgresql-contrib \
+#  postgresql \
+#  libpq5
 
 RUN a2enmod expires
 RUN a2enmod rewrite
@@ -46,3 +50,7 @@ RUN cd /root && git clone https://github.com/drush-ops/drush.git && chmod u+x dr
 
 ADD start.sh /start.sh
 RUN chmod 0755 /start.sh
+
+RUN mkdir -p /home/georezol
+WORKDIR /home/georezo
+
